@@ -17,7 +17,7 @@ export class ProductController {
         })
     }
 
-    @Get()
+    @Get('/')
     async fetchAll(@Res() response) {
         const products = await this.productService.readAll();
         return response.status(HttpStatus.OK).json({
